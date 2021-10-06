@@ -19,8 +19,7 @@ mongo = PyMongo(app)
 @app.route("/")
 @app.route("/get_novels")
 def get_novels():
-    novel = mongo.db.novel.find()
-    return render_template("novels.html", novel=novel)
+    return render_template("novels.html")
 
 
 if __name__ == "__main__":
